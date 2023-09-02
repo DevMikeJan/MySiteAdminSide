@@ -1,0 +1,262 @@
+* {
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    color: #f1f1f1;
+}
+
+
+a {
+    text-decoration: none;
+    color: #f1f1f1;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    background-color: #1A2D28;
+    font-family:'Teko', sans-serif;
+
+}
+
+.main_nav {
+    display: grid;
+    background-color: #2196F3;
+    grid-template-columns: 10% 90%;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.flex_item1 {
+    background-color: #2F4F4F;
+    overflow : hidden;
+}
+
+.flex_item1_wrapper {
+    position: fixed;
+    width: 10%;
+    height: 100%;
+    background-color: #2F4F4F;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.ham_wrapper {
+    width: 100%;
+    position: relative;
+    display: block;
+    height: 30px;
+    box-shadow: 0px 0px 2px 2px #1A2D28;
+    margin-bottom: 5px;
+}
+
+.flex1_item {
+    width: 25px;
+    height: 20px;
+    background-color: #008080;
+    position: absolute;
+    right: 1px;
+    top: 2px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding-top: 2px;
+    padding-right: 5px;
+    padding-left: 5px;
+    gap: 5px;
+    border-radius: 5px;
+    border-color: solid #1A2D28;
+    overflow : hidden;
+    cursor: pointer;
+    transition: 1.5s;
+}
+
+.flex1_item:hover {
+    opacity: .5;
+    transition: .5s;
+}
+
+.flex1_item .ham {
+    height: 2px;
+    background-color: #f1f1f1;
+    width: 100%;
+    border-radius: 2px;
+    transition: 1s;
+    z-index: 1;
+}
+
+.flex1_item .ham_line_1 {
+    transform: translate(0px,7px) rotate(-45deg);
+}
+
+.flex1_item .ham_line_2 {
+    transform: translate(-50px,0);
+}
+
+.flex1_item .ham_line_3 {
+    transform: translate(0px,-7px) rotate(45deg);
+}
+
+
+.side_nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: .5s;
+}
+
+
+.side_nav_item1, .side_nav_item2, .side_nav_item3 {
+    overflow: hidden;
+    padding: 0;
+}
+
+.side_nav_item1 > span, .side_nav_item2 > span, .side_nav_item3 > span {
+    display: block;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.side_nav_item1 > span:hover, .side_nav_item2 > span:hover, .side_nav_item3 > span:hover {
+    color: #000;
+}
+
+.dashBoard_dropdown, .user_dropdown, .assets_dropdown {
+    height: 0px;
+    margin: 0;
+    transition: 1s;
+    padding: 0;
+    box-shadow: 0 0 2px 0 #000;
+}
+
+.dashBoard_dropdown > ul, .user_dropdown > ul, .assets_dropdown > ul {
+    padding: 0;
+}
+
+.dashBoard_dropdown > ul > li > a, .user_dropdown  > ul > li > a, .assets_dropdown > ul > li > a {
+    width: 100%;
+    display: block;
+    text-align: right;
+    padding-right:5px;
+}
+
+.dashBoard_dropdown > ul > li > a:hover, .user_dropdown  > ul > li > a:hover, .assets_dropdown > ul > li > a:hover {
+    color: #000;
+    transition: .5s;
+}
+
+.flex_item1_Icon_wrapper {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+    margin-top: 30px;
+    transition: .5s;
+}
+
+.Dashboard_icon_wrapper, .User_icon_wrapper, .Assets_icon_wrapper {
+    width: 100%;
+    height: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.Dashboard_icon, .User_icon, .Assets_icon {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.Dashboard_icon > img, .User_icon > img, .Assets_icon > img {
+    width: 60%;
+    margin: auto;
+    height: 100%;
+}
+
+.flex_item2 {
+    background-color: #1A2D28;
+}
+
+.top_nav {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.flex_item2_wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    background-color: #2F4F4F;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    overflow: hidden;
+    padding: 0;
+}
+
+.top_nav_top_items {
+}
+
+.top_nav_bottom_items {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 65% 3% 3% 20%;
+    gap: 2px;
+    transition: .5s;
+}
+
+
+
+.notification_toggle, .settings_toggle, .user_loggedin_toggle {
+    width: 100%;
+    height: 100%;
+    line-height: 4;
+    text-align: center;
+}
+
+.notification_toggle {
+    transition: .5s;
+}
+
+.user_loggedin_toggle {
+    text-align: left;
+}
+
+.notification_toggle > span, .settings_toggle > span,.user_loggedin_toggle > span {
+    cursor: pointer;
+}
+
+
+.notification_toggle > span:hover, .settings_toggle > span:hover,.user_loggedin_toggle > span:hover {
+    opacity: .5;
+    transition: .5s;
+}
+
+
+
+.notification_toggle > span > img, .settings_toggle > span > img, .user_loggedin_toggle > span > img {
+    width: 30px;
+    height: 20px;
+}
+
+
+
+

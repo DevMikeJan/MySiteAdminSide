@@ -1,0 +1,160 @@
+.all_assets_container, .upload_assets_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.assets_nav_header, .upload_nav_header {
+    width: 100%;
+    height: 50px;
+    box-shadow: 0px 1px 0px 0px #ffff;
+}
+
+.assets_conten_items, .upload_conten_items {
+    width: 100%;
+    height:auto;
+}
+
+
+.upload_form_container {
+    width: 50%;
+    text-align: center;
+    height: auto;
+    margin-top: 10px;
+}
+
+.upload_form_container > form {
+    width: 50%;
+    margin: auto;
+    height: auto;
+    padding: 5px;
+    display: grid;
+    grid-template-rows: 60% 70%;
+    background-color: #2F4F4F;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.asset_img_wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 40%;
+    overflow: hidden;
+}
+
+.asset_Img_Prev {
+    padding: 2px;
+}
+
+ .actl_asset_img_src {
+    display: none;
+}
+
+.asset_Img_Prev > .actl_asset_img_src, .asset_Img_Prev > .actl_asset_img_src_ph {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.asset_file_input_wrapper {
+    width: 100%;
+    text-align: left;
+    padding: 2px;
+}
+
+.asset_file_input_wrapper > div > input {
+    width: 100%;
+    cursor: pointer;
+}
+
+
+.asset_nonfile_input {
+    width: 100%;
+}
+
+.asset_nonfile_input > input {
+    width: 80%;
+    display: block;
+    border: none;
+    margin: auto;
+    border-radius: 2px;
+    margin-top: 5px;
+    color: #000;
+}
+
+.asset_nonfile_input > button {
+    width: 20%;
+    border: none;
+    border-radius: 2px;
+    margin-top: 5px;
+    cursor: pointer;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.asset_nonfile_input > button:hover {
+    opacity: .5;
+    transition: .5s;
+}
+
+.asset_nonfile_input > .process_msg {
+    width: 100%;
+    text-align: center;
+    color:crimson;
+}
+
+
+/*Show Assets*/
+.assets_conten_items {
+    width: 100%;
+    padding: 5px;
+}
+.assets_content_items_wrapper {
+    margin-top: 5px;
+    width: 100%;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: auto auto auto auto auto auto;
+}
+
+.griditems {
+    width: auto;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 70% 30%;
+    gap: 2px;
+    border-radius: 5px;
+    background-color: #AFEEEE;
+    padding: 2px;
+}
+
+.griditems > .asset_img_holder {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.asset_img_holder > img {
+    width: 100%;
+    height: 100%;
+}
+
+.asset_info_wrapper {
+    width: 100%;
+}
+
+.asset_info_wrapper > span {
+    color: #000;
+}
+
+/*View Asset Detail Section*/
+.asset_detail_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    z-index: 2;
+}
