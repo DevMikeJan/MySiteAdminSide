@@ -109,7 +109,6 @@ class UploadCtrler extends Controller {
            else {
             echo "There was and error in uploading the file";
            }
-           
         }
    }
 

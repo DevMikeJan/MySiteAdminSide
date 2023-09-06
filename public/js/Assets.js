@@ -120,9 +120,6 @@ $(document).ready(function(){
             contentType:false,
             cache:false,
             processData:false,
-            beforeSend:function(){
-              $('#process_msg').html('Loading......');
-            },
             success:function(data){
               $('#process_msg').html(data);
             }
