@@ -27,6 +27,9 @@ class UploadCtrler extends Controller {
             'asset_img_ext' => '',
             'random_number_rar' => '',
             'random_number_img' => '',
+            'uploader_id' => '',
+            'uploader_name' => '',
+            'uploaded_date' => '',
             'process_msg' => ''
         ];
 
@@ -50,6 +53,9 @@ class UploadCtrler extends Controller {
                 'asset_img_ext' => '',
                 'random_number_rar' => mt_rand(),
                 'random_number_img' => mt_rand(),
+                'uploader_id' => $_SESSION['user_id'],
+                'uploader_name' => $_SESSION['user_fname'] & $_SESSION['user_mname'] &  $_SESSION['user_lname'],
+                'uploaded_date' => date("Y-m-d H:i:s a"),
                 'error_message' => ''
             ];
 

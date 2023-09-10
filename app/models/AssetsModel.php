@@ -18,9 +18,11 @@ class AssetsModel {
 
     public function fileUpload($conn, $data) {
         $conn->query('INSERT INTO ASSETS_UPLOAD(ASSETFILE_ID, ASSET_NAME, ASSET_DESC, ASSET_FILE_NAME, ASSET_RAR_FILE_EXT,
-                                                ASSET_IMG_FILE_EXT, ASSET_RAR_RAN_NUM, ASSET_IMG_RAN_NUM)
+                                                ASSET_IMG_FILE_EXT, ASSET_RAR_RAN_NUM, ASSET_IMG_RAN_NUM,ASSET_DEVELOPER_ID,
+                                                ASSET_DEVELOPER_BY, ASSET_UPLOADED_DATE)
                                         VALUES (:ASSETFILE_ID, :ASSET_NAME, :ASSET_DESC, :ASSET_FILE_NAME, :ASSET_RAR_FILE_EXT,
-                                                :ASSET_IMG_FILE_EXT, :ASSET_RAR_RAN_NUM, :ASSET_IMG_RAN_NUM)');
+                                                :ASSET_IMG_FILE_EXT, :ASSET_RAR_RAN_NUM, :ASSET_IMG_RAN_NUM, :ASSET_DEVELOPER_ID,
+                                                :ASSET_DEVELOPER_BY, :ASSET_UPLOADED_DATE)');
 
         $conn->bind(':ASSETFILE_ID', $data['asset_file_id']);
         $conn->bind(':ASSET_NAME', $data['asset_name']);
@@ -30,6 +32,9 @@ class AssetsModel {
         $conn->bind(':ASSET_IMG_FILE_EXT', $data['asset_img_ext']);
         $conn->bind(':ASSET_RAR_RAN_NUM', $data['random_number_rar']);
         $conn->bind(':ASSET_IMG_RAN_NUM', $data['random_number_img']);
+        $conn->bind(':ASSET_DEVELOPER_ID', $data['uploader_id']);
+        $conn->bind(':ASSET_DEVELOPER_BY', $data['uploader_name']);
+        $conn->bind(':ASSET_UPLOADED_DATE', $data['uploaded_date']);
         $inserted = $conn->execute();
 
         if($inserted){
